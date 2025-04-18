@@ -99,7 +99,7 @@ class Header extends Component {
                             <tbody>
                               <tr>
                                 <td className="si-pic">
-                                  <img src="img/select-product-1.jpg" alt="" />
+                                  <img src="img/select-product-1.jpg" width={200} height={200} alt="" />
                                 </td>
                                 <td className="si-text">
                                   <div className="product-selected">
@@ -113,7 +113,7 @@ class Header extends Component {
                               </tr>
                               <tr>
                                 <td className="si-pic">
-                                  <img src="img/select-product-2.jpg" alt="" />
+                                  <img src="img/select-product-2.jpg" width={200} height={200} alt="" />
                                 </td>
                                 <td className="si-text">
                                   <div className="product-selected">
