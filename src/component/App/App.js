@@ -11,6 +11,8 @@ function One() {
   return <div>Chao ban</div>
 }
 
+
+
 // function App() {
 //   return (
 //     <div id="container">
@@ -181,6 +183,21 @@ function B(props) {
   </div>
 }
 
+var object = {
+  num_1: '3',
+  num_2: '4'
+};
+
+function tich(object) {
+  var c = object.num_1 * object.num_2
+  return c
+}
+
+tich(object);
+
+
+
+var person = new Object();
 
 function Greeting(props) {
   return <h1>Hello, {props.name}!</h1>;
@@ -197,16 +214,62 @@ class Four extends Component {
 }
 
 class App extends Component {
-  render () {
+  render () { 
     return (
       <div id="container">
         <Header />
         {/*this is content area */}
         <RightContent />
       </div>
+
+      
     )
   }
 }
 
+//( Ví dụ)
+// constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     factory: "Fancy"
+  //   };
+  // }
+// <div>
+      //   <Car factory={this.state.factory}></Car>
+      //   <Car factory={this.state.factory}></Car>
+      // </div>
+
+// class Car extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       brand: "Ford",
+//       model: "Mustang",
+//       color: "red",
+//       year: 1964
+//     };
+//   }
+//   changeColor = () => {
+//     this.setState({color: "blue"});
+//   }
+//   render() {
+//     return (
+//       <div>
+//         <h1>My {this.state.brand}</h1>
+//         <p>
+//           It is a {this.state.color}
+//           {this.state.model}
+//           from {this.state.year}.
+//         </p>
+//         <p>from factory: {this.props.factory}</p>
+//         <button
+//           type="button"
+//           onClick={this.changeColor}
+//         >Change color</button>
+//       </div>
+//     );
+//   }
+// }
+//)
 
 export default App;
