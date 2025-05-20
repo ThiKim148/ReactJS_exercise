@@ -4,8 +4,15 @@ import './App.css';
 import Header from '../Header/Header.js';
 import Content from '../Content/RightContent';
 import RightContent from '../Content/RightContent.js';
-
-
+import LeftContent from '../Content/LeftContent.js';
+import Member from '../Content/Member.js';
+import Couter from '../Content/Couter.js';
+import Couter_function from '../Content/Couter_function.js'
+import Dientich_hcn from '../Content/Dientich_hcn.js';
+import ProductList_class from '../Content/ProductList_class.js';
+import Form_nhap from '../Form/FormNhap.js';
+import FormNhap from '../Form/FormNhap.js';
+import HinhCN from '../HinhCN.js';
 
 function One() {
   return <div>Chao ban</div>
@@ -183,21 +190,7 @@ function B(props) {
   </div>
 }
 
-var object = {
-  num_1: '3',
-  num_2: '4'
-};
 
-function tich(object) {
-  var c = object.num_1 * object.num_2
-  return c
-}
-
-tich(object);
-
-
-
-var person = new Object();
 
 function Greeting(props) {
   return <h1>Hello, {props.name}!</h1>;
@@ -216,16 +209,43 @@ class Four extends Component {
 class App extends Component {
   render () { 
     return (
-      <div id="container">
-        <Header />
-        {/*this is content area */}
-        <RightContent />
-      </div>
+      // <div id="container">
+      //   <Header />
+      //   {/*this is content area */}
+      //   <LeftContent></LeftContent>
+      //   <RightContent />
+      // </div>
 
-      
+      // <div>
+      //   <Member></Member>
+      // </div>
+      // <div>
+      //   <Couter_function></Couter_function>
+      // </div>
+
+      // <div>
+      //   <Dientich_hcn></Dientich_hcn>
+      // </div>
+
+      // <div>
+      //   <ProductList_class></ProductList_class>
+      // </div>
+
+    //   <div>
+    //   <h1>Ứng dụng nhập liệu
+    //   <FormNhap></FormNhap> </h1>
+    // </div>
+
+    <div>
+      <HinhCN></HinhCN>
+    </div>
+
+
     )
   }
 }
+
+// this.state.key
 
 //( Ví dụ)
 // constructor(props) {
@@ -239,37 +259,37 @@ class App extends Component {
       //   <Car factory={this.state.factory}></Car>
       // </div>
 
-// class Car extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       brand: "Ford",
-//       model: "Mustang",
-//       color: "red",
-//       year: 1964
-//     };
-//   }
-//   changeColor = () => {
-//     this.setState({color: "blue"});
-//   }
-//   render() {
-//     return (
-//       <div>
-//         <h1>My {this.state.brand}</h1>
-//         <p>
-//           It is a {this.state.color}
-//           {this.state.model}
-//           from {this.state.year}.
-//         </p>
-//         <p>from factory: {this.props.factory}</p>
-//         <button
-//           type="button"
-//           onClick={this.changeColor}
-//         >Change color</button>
-//       </div>
-//     );
-//   }
-// }
-//)
+class Car extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      brand: "Ford",
+      model: "Mustang",
+      color: "red",
+      year: 1964
+    };
+  }
+  changeColor = () => {
+    this.setState({color: "blue"});
+  }
+  render() {
+    return (
+      <div>
+        <h1>My {this.state.brand}</h1>
+        <p>
+          It is a {this.state.color}
+          {this.state.model}
+          from {this.state.year}.
+        </p>
+        <p>from factory: {this.props.factory}</p>
+        <button
+          type="button"
+          onClick={this.changeColor}
+        >Change color</button>
+      </div>
+    );
+  }
+}
+
 
 export default App;
