@@ -12,15 +12,21 @@ class Room extends Component {
       area: '',
       price: '',
       oldprice: '',
-      rooms: [], // Lưu danh sách phòng ngay trong state
+      rooms: [], 
     };
   }
 
   componentDidMount() {
-    // Khi component load lần đầu, lấy dữ liệu từ localStorage
-    const storedRooms = JSON.parse(localStorage.getItem('rooms')) || [];
+    let storedRooms = JSON.parse(localStorage.getItem('rooms'));
+    
+    if (!storedRooms || storedRooms.length === 0) {
+      storedRooms = getData(); 
+      localStorage.setItem('rooms', JSON.stringify(storedRooms));
+    }
+    
     this.setState({ rooms: storedRooms });
   }
+
 
   saveLocalStorage = (event) => {
     event.preventDefault();
@@ -174,7 +180,7 @@ class Room extends Component {
                 <td>{item.id}</td>
                 <td>{item.name}</td>
                 <td>{item.type_room}</td>
-                <td><img src={item.myfile} style={{ width: '50px', height: '50px' }} alt="Room" /></td>
+                <td><img src={item.myfile} style={{ width: '150px', height: '100px' }} alt="Room" /></td>
                 <td>{item.area}</td>
                 <td>{item.price}</td>
                 <td>{item.oldprice}</td>

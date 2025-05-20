@@ -34,3 +34,17 @@
 .nav-link:hover {
     color: #007bff; 
 }
+
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+  
+  nav ul li a:hover {
+    color: orange;
+  }

@@ -4,7 +4,7 @@ import data from "./data";
 class Add extends Component {
     constructor(props) {
         super(props);
-        const list = props.products || []; // Phòng props.products bị undefined
+        const list = props.products || []; 
 
         this.state = {
             id: list.length > 0 ? parseInt(list[list.length - 1].id) + 1 : 1,
